@@ -15,10 +15,14 @@ java {
 
 repositories {
     mavenCentral()
+    maven {
+        url = uri("https://repo1.maven.org/maven2/")
+    }
 }
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-graphql")
+    implementation("org.springframework.boot:spring-boot-starter-webflux")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework:spring-webflux")
     testImplementation("org.springframework.graphql:spring-graphql-test")
